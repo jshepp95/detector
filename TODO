@@ -1,0 +1,38 @@
+# Detectron2 - COCO
+# Detectron2 - LVIS
+# Detectron2 - Fine-Tuned
+# OWL-ViT
+# Q&A Labelling LLM - OWL ViT
+# Vision Transformer
+# CLIP Reclassification
+
+Training Distribution
+- Data Augmentation
+- Class Balance
+
+# YOLO
+# DINO
+# DETR
+
+# Considerations
+- Non-stationarity; Logos, Lockup, Styles, Rules and Social Media formats will change over time
+- Intersection over Union, Non-Maximum Suppression (NMS)
+
+# Tasks
+- Object Detection
+- Spatial Vaidation
+- Feature Matching SIFT/ORB
+- Instance Segmentation
+- Train Faster R-CNN / YOLOv8
+
+# Data Mining
+- Up to: Unilever, Colmans 11/02/25 
+
+# Experiments
+- Detectron2, Logos only
+- Feature-Based Template Matching OpenCV
+- OWLViT, Logos only
+- Progressive Fine-Tuning
+- Class Balance with COCO
+- Conrastic Learning
+
