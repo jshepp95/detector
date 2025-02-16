@@ -6,6 +6,7 @@ models/yolo_11/
 models/yolo_detector_lozenge/
 runs/
 TODO
+datasets/
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
