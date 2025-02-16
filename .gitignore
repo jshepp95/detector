@@ -5,6 +5,7 @@ detr
 models/yolo_11/
 models/yolo_detector_lozenge/
 runs/
+TODO
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
