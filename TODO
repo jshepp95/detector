@@ -36,3 +36,88 @@ Training Distribution
 - Class Balance with COCO
 - Conrastic Learning
 
+# SIFT
+# - Applied a Difference of Gaussians (DoG) to detect Key Points.
+# - Descriptors are a 128-Dimensional Vector
+# - Features are Scale and Rotation Invariant
+
+# System
+- Feature Matching and Description (SIFT)
+- Feature Matching (FLANN KNN)
+- Homographic Verification (RANSAC)
+- Bounding Boxes
+- IoU Performance
+
+# Keypoints:
+# - Distinctive locations in the image (corners, edges, blobs) detected using the Scale-Invariant Feature Transform (SIFT). 
+# - They remain stable across scale, rotation, and minor affine transformations.
+Keypoints are specific regions of interest in the image (corners, edges, blobs).
+
+# Descriptors:
+# - 128-dimensional vectors that encode local gradient information around the keypoints.
+Descriptors are vector representations of keypoints (gradient histograms).
+
+# FLANN
+# - Fast Library for Approximate Nearest Neighbors (FLANN) used to match feature descriptos between templae and target.
+# - KD-Tree index structure for high-dimensional nearest neigbhor search.
+
+# Lowe's Ratio Test
+# - Filter ambiguous matches, where an acceptable match has a nearest neighbour significantly close, <THRESHOLD>X second best match.
+# - Ensures only distinctive, high-quality matches remain.
+
+# RANSAC
+# - Homography (projection between 2 planes) estimation to identify the transform between corresponding points to align the template onto the target.
+# - Find Hoographic Matrix H
+
+# Grayscale yields computational efficiency, reducing computational complexity by 1/3; Matrix moves from 3-channel features -> 1 channel.
+
+Precision (P) = True Positives / (True Positives + False Positives)
+- Measures how many detections are correct out of all detections made.
+
+Recall (R) = True Positives / (True Positives + False Negatives)
+- Measures how many objects we found out of all objects actually present.
+
+NOTES:
+- Sainsbury's Logo Missing 'Available at' Text - Handling Partial Assets
+- Effect of Low-Resolution and Handling Low-Resolution (check)
+- Overlapping Bounding Boxes, Wave (Lock-up)
+- Handling distorted assets - will templates match?
+- Identifying more than one match of the same asset
+- Checking outlines e.g Nectar Price Lozange having black outline
+- Can Identify 'things' i.e. Text NOT being present - counter-factual
+- Match with colour information for greater control
+
+IMROVEMENTS
+- Semantic Search over Image Space
+- Leverage YOLO
+
+
+COMMANDS
+
+Label Studio
+>> label-studio
+
+Remote
+>> azureuser@51.12.48.133
+
+Port Forward
+>> scp -i ~/.ssh/whizzbang_key_.pem -r azureuser@51.12.48.133:/home/azureuser/projects/object_detection/data/annotations/images ~/Desktop/raw
+
+Local .pem
+>> ~/.ssh/whizzbang_key_.pem
+
+STRATEGIES
+- Fine-Tune Gemini Pro
+
+- Introduce Variability
+----
+- Lozenge variation (data augmentation) colour, size, orientation
+- Lockup variation (data augmentation) colour, size, orientation
+- Wave variation (data augmentation) colour, size, orientation
+- Nectar Price Lozenge variation (data augmentation) colour, size, orientation
+- Sainsbury's Logo variation (data augmentation) colour, size, orientation
+
+
+
+
+
