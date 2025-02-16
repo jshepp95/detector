@@ -7,6 +7,14 @@ models/yolo_detector_lozenge/
 runs/
 TODO
 datasets/
+!datasets/**/*.dvc
+experiments/
+
+# Models
+models/*.pt
+models/*.onnx
+models/*.pkl
+!models/*.dvc
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
